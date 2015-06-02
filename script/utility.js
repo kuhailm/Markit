@@ -1,10 +1,12 @@
+
+/* this module is used to format numbers */
 var numberFormat=(
     function(){
     //privates
-    var suffixes=['','K','M','B','T'];
+    var suffixes=['','K','M','B','T']; //suffixes for numbers: K=Kilo, M=Million, B=Billion, T=Trillion
     return{
         format: function(number,precision){
-            var sign=number<0?"-":"";
+            var sign=number<0?"-":""; //whether the number is positive or negative
             number=Math.abs(number);
             var suffix_index=0;
             var suffix_length=suffixes.length;
@@ -16,7 +18,7 @@ var numberFormat=(
     }
     }}());
 
-function htmlMaker(html){
+function htmlMaker(html){ //this class is used to generate dynamic HTML
  this.html=html; 
 }
 
